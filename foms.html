@@ -1,117 +1,101 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>BILLING DESK</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BILLING DESK</title>
 
-	<link rel="stylesheet" type="text/css" href="styles.css">
-	<link rel="icon" type="image/x-icon" href="https://cdn.logo.com/hotlink-ok/logo-social.png">	
-</head>
-<body>
-	<div class="head">
-		<img src="https://cdn.logo.com/hotlink-ok/logo-social.png">
-		<h1>AVENUE SUPERMARKET BILLING</h1>
-	</div>
-	<div class="footer">
-	<ul>
-		<li><a href="home.html">HOME</a></li>
-		<li><a href="#">EDIT</a></li>
-		<li><a href="#">TOOLS</a></li>
-		<li><a href="#">HELP</a></li>
-		<li><a href="#">CONTACT US</a></li>
-		<li class="lastchild"><a href="Leo.html">REGISTER</a></li>
-		<li class="lastchild"><a href="#">SIGN IN</a></li>
-		
-		
-	</ul>
-	</div>
-	<!--
-	<form>
-		<div class="headform">
-		<h1 align="center">REGISTER YOUR DETAILS</h2>
-		</div>
-		<div class="labin">
-			<div class="label1"><label>USERNAME:</label>
-			<input type="text" name="username"></div>
+    <link rel="stylesheet" type="text/css" href="css\styles.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://cdn.logo.com/hotlink-ok/logo-social.png"
+    />
+  </head>
+  <body>
+    <div class="head">
+      <img src="https://cdn.logo.com/hotlink-ok/logo-social.png" />
+      <h1>AVENUE SUPERMARKET BILLING</h1>
+    </div>
+    <div class="footer">
+      <ul>
+        <li><a href="home.html">HOME</a></li>
+        <li><a href="#">EDIT</a></li>
+        <li><a href="#">TOOLS</a></li>
+        <li><a href="#">HELP</a></li>
+        <li><a href="#">CONTACT US</a></li>
+        <li class="lastchild"><a href="Leo.html">REGISTER</a></li>
+        <li class="lastchild"><a href="#">SIGN IN</a></li>
+      </ul>
+    </div>
+    <form method="POST" action="submit_registration.php">
+      <div class="headform">
+        <h1>REGISTER YOUR DETAILS</h1>
+      </div>
 
-			<div class="label1"><label>FIRST NAME:</label>
-			<input type="text" name="firstname"></div>
+      <label><b>USERNAME:</b></label>
+      <input
+        type="text"
+        name="username"
+        placeholder="Enter Username"
+        required
+      />
 
-			<div class="label1"><label>LAST NAME:</label>
-			<input type="text" name="lastname"></div>
+      <label><b>FIRST NAME:</b></label>
+      <input
+        type="text"
+        name="firstname"
+        placeholder="Enter Firstname"
+        required
+      />
 
-			<div class="label1"><label>PHONE NUMBER:</label>
-			<input type="text" name="email"></div>
+      <label><b>LAST NAME:</b></label>
+      <input
+        type="text"
+        name="lastname"
+        placeholder="Enter Lastname"
+        required
+      />
 
-			<div class="label1"><label>EMAIL:</label>
-			<input type="text" name="email"></div>
+      <label><b>PHONE NUMBER:</b></label>
+      <input
+        type="number"
+        name="phone"
+        maxlength="13"
+        placeholder="Enter Phone Number"
+        required
+      />
 
-			<div class="label1"><label>PASSWORD:</label>
-			<input type="text" name="pass"></div>
+      <label><b>EMAIL:</b></label>
+      <input type="email" name="email" placeholder="Enter Email Id" required />
 
-			<div class="label1"><label>CONFIRM PASSWORD:</label>
-			<input type="text" name="conpass"></div>
-		</div>
-		<div class="checl">
-			<input  type="checkbox" name="check">
-			<label>Please check & verify above details</label></div>
-			
-		
-		<div class="button">
-			<input type="submit" name="submit" value="REGISTER">
-			<input class="clear" type="RESET" name="clear" value="CLEAR">
-		</div>
-	</form>
-	
--->
+      <label><b>PASSWORD:</b></label>
+      <input
+        type="password"
+        name="pass"
+        placeholder="Enter Password"
+        required
+      />
 
+      <label><b>CONFIRM PASSWORD:</b></label>
+      <input
+        type="password"
+        name="conpass"
+        placeholder="Enter Confirm Password"
+        required
+      />
 
+      <div class="chek1">
+        <input type="checkbox" name="check" required />
+        <label>Please check & verify above details</label>
+      </div>
 
-<!--
-<form>
-		<div class="headform">
-		<h1 align="center">REGISTER YOUR DETAILS</h1>
-		
-		<div class="headform1">
-			<label>USERNAME:</label>
-			<input type="text" name="username">
-
-			<label>FIRST NAME:</label>
-			<input type="text" name="firstname">
-
-			<label>LAST NAME:</label>
-			<input type="text" name="lastname">
-
-			<label>PHONE NUMBER:</label>
-			<input type="text" name="email">
-
-			<label>EMAIL:</label>
-			<input type="text" name="email">
-
-			<label>PASSWORD:</label>
-			<input type="text" name="pass">
-
-			<label>CONFIRM PASSWORD:</label>
-			<input type="text" name="conpass">
-		
-		<
-			<input  type="checkbox" name="check">
-			<label>Please check & verify above details</label>
-			
-		
-		
-			<input type="submit" name="submit" value="REGISTER">
-			<input class="clear" type="RESET" name="clear" value="CLEAR">
-		</div>
-		
-	</form>-->
-
-
-<label for="img">
-   <input type="submit" name="submit" id="img" value="img-btn">
-   <img src="https://static.thenounproject.com/png/2265584-200.png" id="img">
-</label>
-
-</body>
+      <div class="btn">
+        <button type="reset" name="clear">CLEAR</button>
+        <button type="submit" name="submit">
+          <a href="home.html">REGISTER</a>
+        </button>
+      </div>
+    </form>
+  </body>
 </html>
