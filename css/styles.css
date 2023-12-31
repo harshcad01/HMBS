@@ -194,3 +194,11 @@ button[type="submit"]:hover {
     background-color: red;
     margin-top: auto;
  }
+
+ .passclass input{
+    display: inline-table;   
+ }
+
+ .passclass .box{
+    margin: 0;
+ }
