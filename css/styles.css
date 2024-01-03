@@ -202,3 +202,8 @@ button[type="submit"]:hover {
  .passclass .box{
     margin: 0;
  }
+
+
+ .ppp{
+    border: 1px solid black;
+ }
