@@ -22,3 +22,4 @@ function togglePassword() {
     confirmPasswordInput.type = "password";
   }
 }
+
