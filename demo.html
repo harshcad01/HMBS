@@ -1,18 +1,59 @@
+<!DOCTYPE html>
 <html>
 <head>
-  <title>NEW REPOSITRY<\title>
-  <head>
-    <body>
-      	<h1> Opened page<h1>
-	<h2> Opened page<h2>
-	<h3> Opened page<h3>
-	<h4> Opened page<h4>
-	<h5> Opened page<h5>
-	<h6> Opened page<h6>
-		<p>hello there , this is harsh<\p>
-			<p>hello there , this is harsh<\p>
-				<p>hello there , this is harsh<\p>
-					<p>hello there , this is harsh<\p>
-						<p>hello there , this is harsh<\p>
-      <body>
-  <html>
+  <title>Horizontal and Vertical Scroll</title>
+  <style>
+    /* CSS for the outer container with vertical scrollbar */
+    body {
+      margin: 0;
+      overflow-y: scroll; /* Enable vertical scrollbar for the entire page */
+    }
+
+    /* CSS for the inner container with horizontal scrollbar */
+    #outerContainer {
+      width: 100%; /* Full width of the page */
+      height: 100vh; /* Full height of the viewport */
+      display: flex; /* Use flexbox for layout */
+      align-items: flex-start; /* Align items to the start */
+      justify-content: center; /* Center the content horizontally */
+    }
+
+    #innerContainer {
+      width: 80%; /* Set a fixed width for the container */
+      border: 1px solid #ccc; /* Optional: Add border for visualization */
+      overflow-x: auto; /* Enable horizontal scrolling */
+      max-height: 80vh; /* Set a maximum height for the container */
+      padding: 20px; /* Optional: Add padding for visualization */
+    }
+
+    /* CSS for the content inside the container */
+    .content {
+      display: inline-block; /* Display content elements in a line */
+      width: 200px; /* Set width for individual content */
+      height: 200px; /* Set height for individual content */
+      margin-right: 20px; /* Optional: Add spacing between content */
+      background-color: #eee; /* Optional: Add background color for visualization */
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <h1>Fixed Content</h1>
+    <p>Some content that remains fixed on the page.</p>
+  </div>
+
+  <div id="outerContainer">
+    <div id="innerContainer">
+      <!-- Content that can be scrolled horizontally -->
+      <div class="content">Content 1</div>
+      <div class="content">Content 2</div>
+      <div class="content">Content 3</div>
+      <!-- Add more content as needed -->
+    </div>
+  </div>
+
+  <div>
+    <p>Other content...</p>
+  </div>
+</body>
+</html>

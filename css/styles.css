@@ -1,3 +1,6 @@
+body{
+    scroll-behavior: auto;
+}
 img{
 	width: 5%;
 	height: 5%;
@@ -26,7 +29,7 @@ li a{
 	justify-content: center;
 	padding: 20px 20px;
 	color: white;
-	transition: background-color 1s ease-out 50ms	
+
 }
 .lastchild{
 	float: right;
@@ -71,7 +74,6 @@ a:hover{
 }
 form{
 	border: 0px solid black;
-	
 	padding: 20px;
 }
 
@@ -96,7 +98,8 @@ img{
 }
 form{
 	border: 0px solid black;
-	
+	overflow-y: scroll;
+    height: 400px;
 	padding: 20px;
 }
 .headform{
@@ -207,3 +210,4 @@ button[type="submit"]:hover {
  .ppp{
     border: 1px solid black;
  }
+
