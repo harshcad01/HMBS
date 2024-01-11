@@ -37,3 +37,8 @@ form{
 	padding: 20px;
 	background-color: lightblue;
 }
+
+
+.data{
+	border: 1px solid black;
+}

@@ -1,18 +1,28 @@
 <html>
 <head>
-  <title>NEW REPOSITRY<\title>
+  <title>NEW REPOSITRY</title>
   <head>
     <body>
-      	<h1> Opened page<h1>
-	<h2> Opened page<h2>
-	<h3> Opened page<h3>
-	<h4> Opened page<h4>
-	<h5> Opened page<h5>
-	<h6> Opened page<h6>
-		<p>hello there , this is harsh<\p>
-			<p>hello there , this is harsh<\p>
-				<p>hello there , this is harsh<\p>
-					<p>hello there , this is harsh<\p>
-						<p>hello there , this is harsh<\p>
-      <body>
+		<table id="myTable"> 
+			<tr> 
+			  <td>Cell 1</td> 
+			  <td>Cell 2</td> 
+			  <td>Cell 3</td> 
+			</tr> 
+		  </table> 
+		   
+		  <button onclick="getValue()">Get Value</button>
+		  
+		  <script>
+			function getValue() { 
+  var table = document.getElementById("myTable"); 
+  var cells = table.getElementsByTagName("td"); 
+ 
+  for (var i = 0; i < cells.length; i++) { 
+    var cellValue = cells[i].innerHTML; // or cells[i].textContent 
+    console.log(cellValue); 
+  } 
+} 
+		  </script>
+		  </body>
   <html>

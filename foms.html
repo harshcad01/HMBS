@@ -28,7 +28,7 @@
         <li class="lastchild"><a href="#">SIGN IN</a></li>
       </ul>
     </div>
-    <form method="POST" action="submit_registration.php">
+    <form method="POST" action="submit_registration.php" onsubmit="registration(event)">
       <div class="headform">
         <h1>REGISTER YOUR DETAILS</h1>
       </div>
@@ -110,8 +110,8 @@
 
       <div class="btn">
         <button type="reset" name="clear">CLEAR</button>
-        <button type="submit" name="submit">
-          <a href="home.html">REGISTER</a>
+        <button type="submit" name="submit" onclick="register()">
+          <a href="table.html">REGISTER</a>
         </button>
       </div>
     </form>
