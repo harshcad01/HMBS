@@ -17,33 +17,38 @@ function togglePassword() {
 
 
 
+  function register() {
 
-  function registration(event){
-    event.preventDefault();
-
-    var uname = document.getElementsByName("username").value;
-    var fname = document.getElementsByName("firstname").value;
-    var lname = document.getElementsByName("lastname").value;
-    var phnumber = document.getElementsByName("phone").value;
-    var email = document.getElementsByName("email").value;
-
+    var usname = document.getElementById("username").value;
+    document.getElementById("tblusername").innerHTML = usname;
+  
+    var fname = document.getElementById("firstname").value;
+    document.getElementById("tblfirstname").innerHTML = fname;
+  
+    var lname = document.getElementById("lastname").value;
+    document.getElementById("tbllastname").innerHTML = lname;
+  
+    var phnum = document.getElementById("phnumber").value;
+    document.getElementById("tblphnumber").innerHTML = phnum;
+  
+    var email = document.getElementById("email").value;
+    document.getElementById("tblemail").innerHTML = email;
+  
+    var dob = document.getElementById("dob").value;
+    document.getElementById("tbldob").innerHTML = dob;
+  
+    if (document.getElementById('male').checked) {
+      gender_male = document.getElementById('male').value;
+      document.getElementById("tblgender").innerHTML = gender_male;
+    }
+  
+    if (document.getElementById('female').checked) {
+      gender_female = document.getElementById('female').value;
+      document.getElementById("tblgender").innerHTML = gender_female;
+    }
   }
-
-  function register(){
-    var uname = document.getElementsByName("username").value;
-    var fname = document.getElementsByName("firstname").value;
-    var lname = document.getElementsByName("lastname").value;
-    var phnumber = document.getElementsByName("phone").value;
-    var email = document.getElementsByName("email").value;
-
-    uname=document.getElementById("username").innerHTML;
-    fname=document.getElementById("firstname").innerHTML;
-    lname=document.getElementById("lastname").innerHTML;
-    phnumber=document.getElementById("phnumber").innerHTML;
-    email=document.getElementById("email").innerHTML;
-
-  }
-
+  
+  
 
 
 

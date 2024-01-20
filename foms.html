@@ -28,7 +28,7 @@
         <li class="lastchild"><a href="#">SIGN IN</a></li>
       </ul>
     </div>
-    <form method="POST" action="submit_registration.php" onsubmit="registration(event)">
+    
       <div class="headform">
         <h1>REGISTER YOUR DETAILS</h1>
       </div>
@@ -37,6 +37,7 @@
       <input
         type="text"
         name="username"
+        id="username"
         placeholder="Enter Username"
         required
       />
@@ -45,6 +46,7 @@
       <input
         type="text"
         name="firstname"
+        id="firstname"
         placeholder="Enter Firstname"
         required
       />
@@ -53,6 +55,7 @@
       <input
         type="text"
         name="lastname"
+        id="lastname"
         placeholder="Enter Lastname"
         required
       />
@@ -61,13 +64,46 @@
       <input
         type="number"
         name="phone"
+        id="phnumber"
         maxlength="13"
         placeholder="Enter Phone Number"
         required
       />
 
       <label><b>EMAIL:</b></label>
-      <input type="email" name="email" placeholder="Enter Email Id" required />
+      <input type="email" id="email" placeholder="Enter Email Id" required />
+
+
+      <label><b>Date of Birth:</b></label>
+      <input
+        type="date"
+        name="dob"
+        value=""
+        id="dob"
+        placeholder="Enter dob"
+        required
+      /><br>
+
+      <label><b>Gender:</b></label>
+      <input
+        type="radio"
+        name="gender"
+        value="Male"
+        id="male"
+        required
+      >
+      Male </input>
+
+      <input
+        type="radio"
+        name="gender"
+        value="female"
+        id="female"
+        required
+      >
+      Female </input>
+      <br>
+
 
       <label><b>PASSWORD:</b></label>
       <div class="passclass">
@@ -114,8 +150,45 @@
           <a href="#">REGISTER</a>
         </button>
       </div>
-    </form>
+    
 
+
+
+    <table border="1px" align="CENTER">
+      <tr>
+        <th>Registreation Data</th>
+      </tr>
+      <tr>
+        <td>Username</td>
+        <td id="tblusername"></td>
+      </tr>
+      <tr>
+        <td>Firstname</td>
+        <td id="tblfirstname"></td>
+      </tr>
+      <tr>
+        <td>lastname</td>
+        <td id="tbllastname"></td>
+      </tr>
+      <tr>
+        <td>phnumber</td>
+        <td id="tblphnumber"></td>
+      </tr>
+      <tr>
+        <td>Email</td>
+        <td id="tblemail"></td>
+      </tr>
+      <tr>
+        <td>Date Of Birth</td>
+        <td id="tbldob"></td>
+      </tr>
+
+      <tr>
+        <td>Gender</td>
+        <td id="tblgender"></td>
+      </tr>
+
+    </table>
     <script src="js/myscript.js"></script>
   </body>
 </html>
