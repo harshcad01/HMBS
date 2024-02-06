@@ -1,53 +1,207 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>BILLING DESK</title>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>BILLING SOFTWARE</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/Style.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="d-flex" id="wrapper">
+            <!-- Sidebar-->
+            <div class="border-end bg-white" id="sidebar-wrapper">
+                <div class="sidebar-heading border-bottom bg-danger text-light ">HMBS</div>
+                <div class="list-group list-group-flush">
+                    <a class="list-group-item list-group-item-action list-group-item-info p-2" href="#!">DASHBOARD</a>
+                    <a class="list-group-item list-group-item-action list-group-item-dark p-2" href="#!">POINT OF SALE</a>
+                    <a class="list-group-item list-group-item-action list-group-item-dark p-2" href="#!">SELL</a>
+                    <a class="list-group-item list-group-item-action list-group-item-dark p-2" href="#!">QUOTATION</a>
+                    <a class="list-group-item list-group-item-action list-group-item-dark p-2" href="#!">PURCHASE</a>
+                    <a class="list-group-item list-group-item-action list-group-item-dark p-2" href="#!">STOCK TRANSFER</a>
+                    <a class="list-group-item list-group-item-action list-group-item-dark p-2" href="#!">PRODUCT</a>
+                    <a class="list-group-item list-group-item-action list-group-item-dark p-2" href="#!">CUSTOMER</a>
+                    <a class="list-group-item list-group-item-action list-group-item-dark p-2" href="#!">SUPPLIER</a>
+                    <a class="list-group-item list-group-item-action list-group-item-dark p-2" href="#!">ACCOUNTING</a>
+                    <a class="list-group-item list-group-item-action list-group-item-dark p-2" href="#!">EXPENDITURE</a>
+                    <a class="list-group-item list-group-item-action list-group-item-dark p-2" href="#!">REPORTS</a>
+                    <a class="list-group-item list-group-item-action list-group-item-dark p-2" href="#!">ANALYTICS</a>
+                    <a class="list-group-item list-group-item-action list-group-item-dark p-2" href="#!">SMS</a>
+                    <a class="list-group-item list-group-item-action list-group-item-dark p-2" href="#!">USER</a>
+                </div>
+            </div>
+            <!-- Page content wrapper-->
+            <div id="page-content-wrapper">
+                <!-- Top navigation-->
+                <nav class="navbar navbar-expand-lg navbar-light bg-dark bg-opacity-75 text-light border-bottom">
+                    <div class="container-fluid">
+                        <h6 class="fw-lighter" id="show-time" >Time</h6>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+                                <li class="nav-item active "><a class="nav-link text-light" href="home.html">HOME</a></li>
+                                <li class="nav-item"><a class="nav-link text-light" href="about.html">ABOUT US</a></li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle text-light" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">OTHERS</a>
+                                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="#!">Action</a>
+                                        <a class="dropdown-item" href="#!">Another action</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#!">Something else here</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <!-- Page content-->
+                <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-md-3">
+                        <!-- Box 1 content goes here -->
+                        <div class="container mt-4">
+                            <div class="card">
+                              <div class="card-body text-center">
+                                <!-- Your box content goes here -->
+                                <p class="card-title">TOTAL ORDER</p>
+                                <h3 id="total-value">112</h3>
+                                <p class="card-text">TODAY ORDER</p>
+                                <h3 id="today-value">23</h3>
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+                      <div class="col-md-3">
+                        <!-- Box 2 content goes here -->
+                        <div class="container mt-4">
+                            <div class="card">
+                              <div class="card-body text-center">
+                                <!-- Your box content goes here -->
+                                <p class="card-title">TOTAL PURCHASE</p>
+                                <h3 id="total-value">990</h3>
+                                <p class="card-text">TODAY PURCHASE</p>
+                                <h3 id="today-value">178</h3>
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+                      <div class="col-md-3">
+                        <!-- Box 3 content goes here -->
+                        <div class="container mt-4">
+                            <div class="card">
+                              <div class="card-body text-center">
+                                <!-- Your box content goes here -->
+                                <p class="card-title">TOTAL SALE</p>
+                                <h3 id="total-value">1550</h3>
+                                <p class="card-text">TODAY SALE</p>
+                                <h3 id="today-value">455</h3>
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+                      <div class="col-md-3">
+                        <!-- Box 4 content goes here -->
+                        <div class="container mt-4">
+                            <div class="card">
+                              <div class="card-body text-center">
+                                <!-- Your box content goes here -->
+                                <p class="card-title">TOTAL PRODUCT</p>
+                                <h3 id="total-value">569</h3>
+                                <p class="card-text">TODAY PRODUCT</p>
+                                <h3 id="today-value">240</h3>
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
 
-    <link rel="stylesheet" type="text/css" href="css\styles.css" />
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="https://cdn.logo.com/hotlink-ok/logo-social.png"
-    />
-  </head>
-  <body>
-    <div class="head">
-      <img src="https://cdn.logo.com/hotlink-ok/logo-social.png" />
-      <h1>AVENUE SUPERMARKET BILLING</h1>
-    </div>
-    <div class="footer">
-      <ul>
-        <li><a href="home.html">HOME</a></li>
-        <li><a href="#">EDIT</a></li>
-        <li><a href="#">TOOLS</a></li>
-        <li><a href="#">HELP</a></li>
-        <li><a href="about.html">ABOUT US</a></li>
-        <li class="lastchild"><a href="foms.html">REGISTER</a></li>
-        <li class="lastchild"><a href="#">SIGN IN</a></li>
-      </ul>
-    </div>
-    <h2 align="center">Hello Guys This Is My Page</h2>
-
-
-    <div class="box-container">
-      <div class="box">MRP PRICE</div>
-      <div class="box">OUR PRICE</div>
-      <div class="box">DEDUCTED PRICE</div>
-      <div class="box">TOTAL AMOUNT</div>
-    </div>
-
-    <div class="mainbox-container">
-      <div class="mainbox">
-        <h1>Items List</h1>
-        <label for="itembox">Artical Name </label>
-        <input class="itembox" type="text" id="itembox">
-        <button>search</button>
-      </div>
-    </div>
-
-
-    <script type="text/javascript" src="js/myscript.js"></script>
-  </body>
+                  <div class="container-fluid">
+                    <div class="container mt-4 ">
+                      <h5>Products List</h5>
+                      <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                          <div class="d-flex flex-row bd-highlight mb-8">
+                            <p class="mb-1 mr-3">MILK</p>
+                            <p class="mb-1">Price: Rs-24.95</p>
+                          </div>
+                          <span class="badge badge-primary badge-pill">$19.99</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                          <div class="d-flex flex-row bd-highlight mb-8">
+                            <p class="mb-1 mr-3">COLA 1/2 litter</p> 
+                            <p class="mb-1">Price: Rs-40</p>
+                          </div>
+                          <span class="badge badge-primary badge-pill">$29.99</span>
+                        </li>
+                        
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                          <div class="d-flex flex-row bd-highlight mb-8">
+                            <p class="mb-1 mr-3"></p>
+                            <p class="mb-1">Price: $39.99</p>
+                          </div>
+                          <span class="badge badge-primary badge-pill">$39.99</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                          <div class="d-flex flex-row bd-highlight mb-8">
+                            <p class="mb-1">Product 4</p>
+                            <p class="mb-1">Price: $49.99</p>
+                          </div>
+                          <span class="badge badge-primary badge-pill">$49.99</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                          <div class="d-flex flex-row bd-highlight mb-8">
+                            <p class="mb-1">Product 4</p>
+                            <p class="mb-1">Price: $49.99</p>
+                          </div>
+                          <span class="badge badge-primary badge-pill">$49.99</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                          <div class="d-flex flex-row bd-highlight mb-8">
+                            <p class="mb-1">Product 4</p>
+                            <p class="mb-1">Price: $49.99</p>
+                          </div>
+                          <span class="badge badge-primary badge-pill">$49.99</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                          <div class="d-flex flex-row bd-highlight mb-8">
+                            <p class="mb-1">Product 4</p>
+                            <p class="mb-1">Price: $49.99</p>
+                          </div>
+                          <span class="badge badge-primary badge-pill">$49.99</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                          <div class="d-flex flex-row bd-highlight mb-8">
+                            <p class="mb-1">Product 4</p>
+                            <p class="mb-1">Price: $49.99</p>
+                          </div>
+                          <span class="badge badge-primary badge-pill">$49.99</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                          <div class="d-flex flex-row bd-highlight mb-8">
+                            <p class="mb-1">Product 4</p>
+                            <p class="mb-1">Price: $49.99</p>
+                          </div>
+                          <span class="badge badge-primary badge-pill">$49.99</span>
+                        </li>
+                        
+                      </ul>
+                    </div>
+                    </div>
+            </div>
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="js/myscript.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
 </html>

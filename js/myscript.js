@@ -23,3 +23,20 @@ function togglePassword() {
   }
 }
 
+
+function updateRealTime() {
+  var currentTime = new Date();
+  var hours = currentTime.getHours();
+  var minutes = currentTime.getMinutes();
+  var seconds = currentTime.getSeconds();
+  var day = currentTime.toDateString();
+
+  minutes = (minutes < 10 ? "0" : "") + minutes;
+  seconds = (seconds < 10 ? "0" : "") + seconds;
+
+
+  document.getElementById("show-time").innerHTML = hours + ":" + minutes + ":" + seconds + " on " + day ;
+}
+setInterval(updateRealTime, 1000);
+updateRealTime();
+
