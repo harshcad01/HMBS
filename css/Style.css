@@ -10872,3 +10872,8 @@ body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
 .product-list{
   margin-right: 40px;
 }
+
+.custom-hover:hover {
+  background-color: red;
+  color: black;
+}

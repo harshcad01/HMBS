@@ -1,59 +1,30 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Horizontal and Vertical Scroll</title>
-  <style>
-    /* CSS for the outer container with vertical scrollbar */
-    body {
-      margin: 0;
-      overflow-y: scroll; /* Enable vertical scrollbar for the entire page */
-    }
-
-    /* CSS for the inner container with horizontal scrollbar */
-    #outerContainer {
-      width: 100%; /* Full width of the page */
-      height: 100vh; /* Full height of the viewport */
-      display: flex; /* Use flexbox for layout */
-      align-items: flex-start; /* Align items to the start */
-      justify-content: center; /* Center the content horizontally */
-    }
-
-    #innerContainer {
-      width: 80%; /* Set a fixed width for the container */
-      border: 1px solid #ccc; /* Optional: Add border for visualization */
-      overflow-x: auto; /* Enable horizontal scrolling */
-      max-height: 80vh; /* Set a maximum height for the container */
-      padding: 20px; /* Optional: Add padding for visualization */
-    }
-
-    /* CSS for the content inside the container */
-    .content {
-      display: inline-block; /* Display content elements in a line */
-      width: 200px; /* Set width for individual content */
-      height: 200px; /* Set height for individual content */
-      margin-right: 20px; /* Optional: Add spacing between content */
-      background-color: #eee; /* Optional: Add background color for visualization */
-    }
-  </style>
-</head>
-<body>
-  <div>
-    <h1>Fixed Content</h1>
-    <p>Some content that remains fixed on the page.</p>
-  </div>
-
-  <div id="outerContainer">
-    <div id="innerContainer">
-      <!-- Content that can be scrolled horizontally -->
-      <div class="content">Content 1</div>
-      <div class="content">Content 2</div>
-      <div class="content">Content 3</div>
-      <!-- Add more content as needed -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+      .custom-hover:hover {
+        background-color: #007bff; /* Bootstrap primary color */
+        color: #fff; /* Text color */
+      }
+    </style>
+    <title>Custom Hover Example</title>
+  </head>
+  <body>
+    <div class="container mt-4">
+      <button class="btn btn-primary custom-hover">Hover Me</button>
     </div>
-  </div>
 
-  <div>
-    <p>Other content...</p>
-  </div>
-</body>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
 </html>
