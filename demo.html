@@ -2,29 +2,51 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Point of Sale</title>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     />
+    <!-- Add your custom CSS styles here -->
     <style>
-      .custom-hover:hover {
-        background-color: #007bff; /* Bootstrap primary color */
-        color: #fff; /* Text color */
-      }
+      /* Add custom CSS styles */
     </style>
-    <title>Custom Hover Example</title>
   </head>
   <body>
-    <div class="container mt-4">
-      <button class="btn btn-primary custom-hover">Hover Me</button>
+    <div class="container mt-5">
+      <div class="row">
+        <!-- Product Display Area -->
+        <div class="col-lg-8">
+          <div class="card">
+            <div class="card-header bg-primary text-white">Products</div>
+            <div class="card-body">
+              <!-- Display products here -->
+            </div>
+          </div>
+        </div>
+        <!-- Cart -->
+        <div class="col-lg-4">
+          <div class="card">
+            <div class="card-header bg-success text-white">Cart</div>
+            <div class="card-body">
+              <!-- Display items in cart here -->
+            </div>
+            <div class="card-footer">
+              <button class="btn btn-primary btn-block">Checkout</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
+    <!-- Bootstrap JS and other scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Add your custom scripts here -->
+    <script>
+      // Add custom JavaScript logic here
+    </script>
   </body>
 </html>

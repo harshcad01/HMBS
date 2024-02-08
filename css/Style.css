@@ -10869,11 +10869,4 @@ body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
       text-shadow: 0 0 1px rgb(0, 183, 255), 0 0 2px rgb(0, 183, 255), 0 0 6px rgb(0, 183, 255); /* Optional text shadow for neon effect */
 }
 
-.product-list{
-  margin-right: 40px;
-}
 
-.custom-hover:hover {
-  background-color: red;
-  color: black;
-}
