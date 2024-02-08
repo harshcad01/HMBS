@@ -32,8 +32,8 @@
             >DASHBOARD</a
           >
           <a
-            class="list-group-item list-group-item-action list-group-item-dark p-2"
-            href="pos.html"
+            class="list-group-item list-group-item-action list-group-item-dark p-2 custom-style"
+            href="#"
             >POINT OF SALE</a
           >
           <a
@@ -162,7 +162,18 @@
                 <div class="card">
                   <div class="card-header bg-primary text-white">Products</div>
                   <div class="card-body">
-                    <!-- Display products here -->
+                   <!-- Display products here -->
+                    <ol class="list-group list-group-flush">
+                      <!-- List of ordered items -->
+                      <div>
+                      <li class="list-group-item">Product 1 - $10
+                        <button class="btn  btn-primary btn-block">remove</button>
+                      </li>
+                    </div>
+                      <li class="list-group-item">Product 2 - $20</li>
+                      <li class="list-group-item">Product 3 - $15</li>
+                      <!-- Add more items dynamically if needed -->
+                    </ol>
                   </div>
                 </div>
               </div>
@@ -172,6 +183,7 @@
                   <div class="card-header bg-success text-white">Cart</div>
                   <div class="card-body">
                     <!-- Display items in cart here -->
+                    <p>Cookies</p>
                   </div>
                   <div class="card-footer">
                     <button class="btn btn-primary btn-block">Checkout</button>
