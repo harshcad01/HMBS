@@ -13,20 +13,95 @@
     />
   </head>
   <body>
-    <div class="head">
-      <img src="https://cdn.logo.com/hotlink-ok/logo-social.png" />
-      <h1>AVENUE SUPERMARKET BILLING</h1>
-    </div>
-    <div class="footer">
-      <ul>
-        <li><a href="#">HOME</a></li>
-        <li><a href="#">EDIT</a></li>
-        <li><a href="#">TOOLS</a></li>
-        <li><a href="#">HELP</a></li>
-        <li><a href="#">CONTACT US</a></li>
-        <li class="lastchild"><a href="index.html">LOGOUT</a></li>
-      </ul>
-    </div>
-    <h2 align="center">THIS IS MY HOME PAGE</h2>
+    <form  method="POST" >
+      <div class="headform">
+        <h1>REGISTER YOUR DETAILS</h1>
+      </div>
+
+      <label><b>USERNAME:</b></label>
+      <input
+        type="text"
+        name="username"
+        placeholder="Enter Username"
+        required
+      />
+
+      <label><b>FIRST NAME:</b></label>
+      <input
+        type="text"
+        name="firstname"
+        placeholder="Enter Firstname"
+        required
+      />
+
+      <label><b>LAST NAME:</b></label>
+      <input
+        type="text"
+        name="lastname"
+        placeholder="Enter Lastname"
+        required
+      />
+
+      <label><b>PHONE NUMBER:</b></label>
+      <input
+        type="number"
+        name="phone"
+        id="phonenum"
+        maxlength="13"
+        placeholder="Enter Phone Number"
+        required
+      />
+
+      <label><b>EMAIL:</b></label>
+      <input type="email" name="email" placeholder="Enter Email Id" required />
+
+      <label><b>PASSWORD:</b></label>
+      <div class="passclass">
+        <input
+          id="pass"
+          type="password"
+          name="pass"
+          placeholder="Enter Password"
+          required
+        />
+        <input
+          class="check"
+          id="check"
+          type="checkbox"
+          onchange="togglePassword()"
+        />
+      </div>
+
+      <label><b>CONFIRM PASSWORD:</b></label>
+      <div class="passclass">
+        <input
+          id="conpass"
+          type="password"
+          name="conpass"
+          placeholder="Enter Confirm Password"
+          required
+        />
+        <input
+          class="check"
+          id="check1"
+          type="checkbox"
+          onchange="togglePassword()"
+        />
+      </div>
+
+      <div class="chek1">
+        <input type="checkbox" name="check" required />
+        <label>Please check & verify above details</label>
+      </div>
+
+      <div class="btn">
+        <button type="reset" name="clear">CLEAR</button>
+        <a href="home.html"></a><button type="submit" name="submit" id="register">
+          REGISTER
+        </button></a>
+      </div>
+    </form>
+
+    <script src="js/myscript.js"></script>
   </body>
 </html>

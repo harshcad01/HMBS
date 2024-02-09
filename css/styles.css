@@ -1,7 +1,7 @@
 
 form{
 	border: 0px solid black;
-	overflow-y: scroll;
+	
     height: 400px;
 	padding: 20px;
 }
@@ -158,6 +158,4 @@ button[type="submit"]:hover {
     border-radius: 100px;
   }
 
-  .navbar-nav .nav-link:hover {
-    color: #ff0000 !important;
-  }
+ 
