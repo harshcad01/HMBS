@@ -40,3 +40,13 @@ function updateRealTime() {
 setInterval(updateRealTime, 1000);
 updateRealTime();
 
+ // Add custom JavaScript logic here
+ $(document).ready(function() {
+  // Search functionality
+  $('#searchInput').on('keyup', function() {
+    var value = $(this).val().toLowerCase();
+    $('.card-body > div').filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
