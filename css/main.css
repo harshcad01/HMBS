@@ -14,3 +14,8 @@
     max-height: 500px; /* Adjust the maximum height as needed */
     overflow-y: auto; /* Enable vertical scrolling */
   }
+
+  .scrollable-table {
+    max-height: 400px; /* Adjust the maximum height as needed */
+    overflow-y: auto; /* Enable vertical scrolling */
+  }

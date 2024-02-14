@@ -50,3 +50,53 @@ updateRealTime();
     });
   });
 });
+
+
+
+$(document).ready(function() {
+  // Counter to keep track of the number of products
+  let productCount = 0;
+
+  // Function to add a new product row
+  function addProductRow(productName, price, stock) {
+    productCount++;
+    const newRow = `
+      <tr>
+        <th scope="row">${productCount}</th>
+        <td><input type="text" class="form-control product-name" value="${productName}"></td>
+        <td><input type="text" class="form-control product-price" value="${price}"></td>
+        <td><input type="text" class="form-control product-stock" value="${stock}"></td>
+        <td>
+          <!-- Add and Remove buttons -->
+          <button type="button" class="btn btn-success btn-sm update-product-btn">Update</button>
+          <button type="button" class="btn btn-danger btn-sm remove-product-btn">Remove</button>
+        </td>
+      </tr>
+    `;
+    $('#product-list').append(newRow);
+  }
+
+  // Event listener for Add Product button click
+  $('#add-product-btn').click(function() {
+    // Example: Add a new product with some default values
+    addProductRow('New Product', '$0.00', '0');
+  });
+
+  // Event listener for Remove Product button click
+  $(document).on('click', '.remove-product-btn', function() {
+    $(this).closest('tr').remove();
+  });
+
+  // Event listener for Update Product button click
+  $(document).on('click', '.update-product-btn', function() {
+    const row = $(this).closest('tr');
+    const productName = row.find('.product-name').val();
+    const price = row.find('.product-price').val();
+    const stock = row.find('.product-stock').val();
+
+    // You can perform further actions with the updated product data here
+    console.log('Updated Product Name:', productName);
+    console.log('Updated Price:', price);
+    console.log('Updated Stock:', stock);
+  });
+});
