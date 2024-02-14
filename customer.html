@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer List</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container mt-5">
+    <h2>Customer List</h2>
+    <div class="card mt-3">
+      <div class="card-header bg-primary text-white">
+        Customers
+      </div>
+      <div class="card-body scrollable-table">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Name</th>
+              <th scope="col">Email</th>
+              <th scope="col">Phone</th>
+              <th scope="col">Actions</th>
+            </tr>
+          </thead>
+          <tbody id="customer-list">
+            <!-- Customer rows will be dynamically added here -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!-- Add Customer Button -->
+    <button type="button" class="btn btn-primary mt-3" id="add-customer-btn">Add Customer</button>
+  </div>
+
+  <!-- Bootstrap JS and other scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Add your custom scripts here -->
+  <script>
+    $(document).ready(function() {
+      let customerCount = 0;
+
+      // Function to add a new customer row
+      function addCustomerRow(name, email, phone) {
+        customerCount++;
+        const newRow = `
+          <tr>
+            <th scope="row">${customerCount}</th>
+            <td><input type="text" class="form-control customer-name" value="${name}"></td>
+            <td><input type="text" class="form-control customer-email" value="${email}"></td>
+            <td><input type="text" class="form-control customer-phone" value="${phone}"></td>
+            <td>
+              <button type="button" class="btn btn-success btn-sm update-customer-btn">Update</button>
+              <button type="button" class="btn btn-danger btn-sm remove-customer-btn">Remove</button>
+            </td>
+          </tr>
+        `;
+        $('#customer-list').append(newRow);
+      }
+
+      // Event listener for Add Customer button click
+      $('#add-customer-btn').click(function() {
+        addCustomerRow('New Customer', '', '');
+      });
+
+      // Event listener for Remove Customer button click
+      $(document).on('click', '.remove-customer-btn', function() {
+        $(this).closest('tr').remove();
+      });
+
+      // Event listener for Update Customer button click
+      $(document).on('click', '.update-customer-btn', function() {
+        const row = $(this).closest('tr');
+        const name = row.find('.customer-name').val();
+        const email = row.find('.customer-email').val();
+        const phone = row.find('.customer-phone').val();
+        
+        // You can perform further actions with the updated customer data here
+        console.log('Updated Name:', name);
+        console.log('Updated Email:', email);
+        console.log('Updated Phone:', phone);
+      });
+    });
+  </script>
+</body>
+</html>
