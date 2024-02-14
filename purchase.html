@@ -1,23 +1,24 @@
 <!DOCTYPE html>
-      <html lang="en">
-        <head>
-          <meta charset="UTF-8" />
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0"
-          />
-          <title>Point of Sale</title>
-          <link
-            rel="stylesheet"
-            href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-          />
-
-          <link rel="stylesheet" href="css/Style.css">
-          <link rel="stylesheet" href="css/main.css">
-        
-          <!-- Add your custom CSS styles here -->
-
-        </head>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>BILLING SOFTWARE</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link rel="stylesheet" href="css/Style.css">
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
   <body>
     <div class="d-flex" id="wrapper">
       <!-- Sidebar-->
@@ -42,13 +43,13 @@
             >SELL</a
           >
           <a
-            class="list-group-item list-group-item-action list-group-item-dark p-2  custom-style"
-            href="#!"
+            class="list-group-item list-group-item-action list-group-item-dark p-2"
+            href="quatation.html"
             >QUOTATION</a
           >
           <a
-            class="list-group-item list-group-item-action list-group-item-dark p-2"
-            href="purchase.html"
+            class="list-group-item list-group-item-action list-group-item-dark p-2 custom-style"
+            href="#!"
             >PURCHASE</a
           >
           <a
@@ -57,7 +58,7 @@
             >STOCK TRANSFER</a
           >
           <a
-            class="list-group-item list-group-item-action list-group-item-dark p-2"
+            class="list-group-item list-group-item-action list-group-item-dark p-2 "
             href="#!"
             >PRODUCT</a
           >
@@ -104,7 +105,7 @@
         </div>
       </div>
       <!-- Page content wrapper-->
-       <div id="page-content-wrapper">
+      <div id="page-content-wrapper">
         <!-- Top navigation-->
         <nav
           class="navbar navbar-expand-lg navbar-light bg-dark bg-opacity-75 text-light border-bottom"
@@ -145,8 +146,8 @@
                     class="dropdown-menu dropdown-menu-end"
                     aria-labelledby="navbarDropdown"
                   >
-                    <a class="dropdown-item" href="#!">Action</a>
-                    <a class="dropdown-item" href="#!">Another action</a>
+                    <a class="dropdown-item" href="signin.html">Sign In</a>
+                    <a class="dropdown-item" href="login.html">Log In</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="#!">Something else here</a>
                   </div>
@@ -155,91 +156,123 @@
             </div>
           </div>
         </nav>
+        <!--HOME CONTENT HERE-->
         <div class="container mt-5">
-            <div class="row">
-              <!-- Quotation Form -->
-              <div class="col-lg-8">
-                <div class="card">
-                  <div class="card-header bg-dark text-white">
-                    Create Quotation
+          <div class="row">
+            <!-- Product Display Area -->
+            <div class="col-lg-8">
+              <div class="card">
+                <div class="card-header bg-primary text-white">
+                  Products Details
+                </div>
+                <div class="card-body scrollable-card">
+                  <!-- Display products here -->
+                  <div class="mb-3">
+                    <h5>Product</h5>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Product Name"
+                    />
                   </div>
-                  <div class="card-body">
-                    <form>
-                      <div class="form-group">
-                        <label for="customerName">Customer Name</label>
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="customerName"
-                          placeholder="Enter customer name"
-                        />
-                      </div>
-                      <div class="form-group">
-                        <label for="products">Products</label>
-                        <textarea
-                          class="form-control"
-                          id="products"
-                          rows="3"
-                          placeholder="Enter products"
-                        ></textarea>
-                      </div>
-                      <div class="form-group">
-                        <label for="totalAmount">Total Amount</label>
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="totalAmount"
-                          placeholder="Total amount"
-                          readonly
-                        />
-                      </div>
-                      <button type="submit" class="btn btn-primary">
-                        Create Quotation
-                      </button>
-                    </form>
+                  <div class="mb-3">
+                    <h5>MRP</h5>
+                    <input
+                      type="number"
+                      class="form-control"
+                      placeholder="Product Price"
+                    />
                   </div>
+                  <div class="mb-3">
+                    <h5>Our Price</h5>
+                    <input
+                      type="number"
+                      class="form-control"
+                      placeholder="Our price"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <h5>Quantity</h5>
+                    <input
+                      type="number"
+                      class="form-control"
+                      placeholder="Quantity"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <h5>Seller</h5>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Seller Name"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <h5>Company Name</h5>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Company Name"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <h5>Company Email</h5>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Company Email"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <h5>Company Contact No</h5>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Company Number"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <h5>Company Address</h5>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Company Adderss"
+                    />
+                  </div>
+                  <!-- Add more products here -->
+                  <button class="btn btn-success mt-2">Add to Cart</button>
                 </div>
               </div>
-              <!-- Quotation List -->
-              <div class="col-lg-4">
-                <div class="card">
-                  <div class="card-header bg-dark text-white">Quotation List</div>
-                  <div class="card-body">
-                    <!-- Display list of quotations here -->
-                    <ul class="list-group">
-                      <!-- Example quotation item: -->
-                      <li
-                        class="list-group-item d-flex justify-content-between align-items-center"
-                      >
-                        Quotation #001
-                        <span class="badge badge-primary badge-pill">$100</span>
-                      </li>
-                      <!-- Add more quotation items here -->
-                    </ul>
-                  </div>
+            </div>
+            <!-- Cart -->
+            <div class="col-lg-4">
+              <div class="card">
+                <div class="card-header bg-success text-white">Cart</div>
+                <div class="card-body">
+                  <!-- Display items in cart here -->
+                  <ul class="list-group">
+                    <!-- Example cart item: -->
+                    <li
+                      class="list-group-item d-flex justify-content-between align-items-center"
+                    >
+                      Product 1
+                      <span class="badge badge-primary badge-pill">$10</span>
+                    </li>
+                    <!-- Add more cart items here -->
+                  </ul>
+                </div>
+                <div class="card-footer">
+                  <button class="btn btn-primary btn-block">
+                    Proceed to Checkout
+                  </button>
                 </div>
               </div>
             </div>
           </div>
-              </div>
-            </div>
-          </div>
-          
-              </div>
-            </div>
-          </div>
-
-          <!-- Bootstrap JS and other scripts -->
-          <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-          <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-          <!-- Add your custom scripts here -->
-          <script>
-            // Add custom JavaScript logic here
-          </script>
-        </body>
-      </html>
+        </div>
+      </div>
     </div>
+  </div>
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

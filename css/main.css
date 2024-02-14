@@ -9,3 +9,8 @@
     border-left-color: #ff0000  !important;
     border-width: 2px;
   }
+
+  .scrollable-card {
+    max-height: 500px; /* Adjust the maximum height as needed */
+    overflow-y: auto; /* Enable vertical scrolling */
+  }
