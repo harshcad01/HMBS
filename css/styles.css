@@ -46,7 +46,7 @@ form{
 label{
     margin-left: 20%;
 }
-input[type=text],input[type=password],input[type=email],input[type=number] {
+input[type=text],input[type=password],input[type=email],input[type=tel] {
     display: block;
     width: 50%;
     padding: 10px;
