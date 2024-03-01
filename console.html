@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - MvcProject</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/MvcProject.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/Styles.css">
+</head>
+<body>
+    <div class="d-flex" id="wrapper">
+        <!-- Sidebar-->
+        <div class="border-end bg-white" id="sidebar-wrapper">
+          <div class="sidebar-heading border-bottom bg-danger text-light">
+            HMBS
+          </div>
+          <div class="list-group list-group-flush">
+            <a
+              class="list-group-item list-group-item-action list-group-item-drak custom-style p-2"
+              href="#!"
+              asp-area="" asp-controller="Home" asp-action="Index">DASHBOARD</a
+            >
+            <a
+              class="list-group-item list-group-item-action list-group-item-dark p-2"
+              href="pos.html"
+              asp-area="" asp-controller="Home" asp-action="Index">POINT OF SALE</a
+            >
+            <a
+              class="list-group-item list-group-item-action list-group-item-dark p-2"
+              href="sell.html"
+              asp-area="" asp-controller="Home" asp-action="Index">SELL</a
+            >
+            <a
+              class="list-group-item list-group-item-action list-group-item-dark p-2"
+              href="quatation.html"
+              asp-area="" asp-controller="Home" asp-action="Index">QUOTATION</a
+            >
+            <a
+              class="list-group-item list-group-item-action list-group-item-dark p-2"
+              href="purchase.html"
+              >PURCHASE</a
+            >
+            <a
+              class="list-group-item list-group-item-action list-group-item-dark p-2"
+              href="#!"
+              >STOCK TRANSFER</a
+            >
+            <a
+              class="list-group-item list-group-item-action list-group-item-dark p-2"
+              href="product.html"
+              asp-area="" asp-controller="Home" asp-action="Index">PRODUCT</a
+            >
+            <a
+              class="list-group-item list-group-item-action list-group-item-dark p-2"
+              href="#!"
+              asp-area="" asp-controller="Home" asp-action="Index">CUSTOMER</a
+            >
+            <a
+              class="list-group-item list-group-item-action list-group-item-dark p-2"
+              href="#!"
+              asp-area="" asp-controller="Home" asp-action="Index">SUPPLIER</a
+            >
+            <a
+              class="list-group-item list-group-item-action list-group-item-dark p-2"
+              href="#!"
+              asp-area="" asp-controller="Home" asp-action="Index">ACCOUNTING</a
+            >
+            <a
+              class="list-group-item list-group-item-action list-group-item-dark p-2"
+              href="#!"
+              asp-area="" asp-controller="Home" asp-action="Index">EXPENDITURE</a
+            >
+            <a
+              class="list-group-item list-group-item-action list-group-item-dark p-2"
+              href="#!"
+              asp-area="" asp-controller="Home" asp-action="Index">REPORTS</a
+            >
+            <a
+              class="list-group-item list-group-item-action list-group-item-dark p-2"
+              href="#!"
+              asp-area="" asp-controller="Home" asp-action="Index">ANALYTICS</a
+            >
+            <a
+              class="list-group-item list-group-item-action list-group-item-dark p-2"
+              href="#!"
+              asp-area="" asp-controller="Home" asp-action="Index">SMS</a
+            >
+            <a
+              class="list-group-item list-group-item-action list-group-item-dark p-2"
+              href="#!"
+              asp-area="" asp-controller="Home" asp-action="Index">USER</a
+            >
+          </div>
+        </div>
+        <!-- Page content wrapper-->
+        
+        <div id="page-content-wrapper">
+          <!-- Top navigation-->
+          <nav
+            class="navbar navbar-expand-lg navbar-light bg-dark bg-opacity-75 text-light border-bottom"
+          >
+            <div class="container-fluid">
+              <h6 class="fw-lighter" id="show-time">Time</h6>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+                  <li class="nav-item active">
+                    <a class="nav-link text-light" href="home.html" asp-area="" asp-controller="Home" asp-action="Index">HOME</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-light" href="about.html" asp-area="" asp-controller="Home" asp-action="Index">ABOUT US</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle text-light"
+                      id="navbarDropdown"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                      >OTHERS</a
+                    >
+                    <div
+                      class="dropdown-menu dropdown-menu-end"
+                      aria-labelledby="navbarDropdown"
+                    >
+                      <a class="dropdown-item" href="signin.html" asp-area="" asp-controller="Home" asp-action="Index">SIGN IN</a>
+                      <a class="dropdown-item" href="login.html" asp-area="" asp-controller="Home" asp-action="Index">LOG IN</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#!" asp-area="" asp-controller="Home" asp-action="Index">Something else here</a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+          </div>
+    </div>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2024 - MvcProject - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
