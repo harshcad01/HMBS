@@ -1,168 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - MvcProject</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/MvcProject.styles.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/css/Styles.css">
-</head>
-<body>
-    <div class="d-flex" id="wrapper">
-        <!-- Sidebar-->
-        <div class="border-end bg-white" id="sidebar-wrapper">
-          <div class="sidebar-heading border-bottom bg-danger text-light">
-            HMBS
-          </div>
-          <div class="list-group list-group-flush">
-            <a
-              class="list-group-item list-group-item-action list-group-item-drak custom-style p-2"
-              href="#!"
-              asp-area="" asp-controller="Home" asp-action="Index">DASHBOARD</a
-            >
-            <a
-              class="list-group-item list-group-item-action list-group-item-dark p-2"
-              href="pos.html"
-              asp-area="" asp-controller="Home" asp-action="Index">POINT OF SALE</a
-            >
-            <a
-              class="list-group-item list-group-item-action list-group-item-dark p-2"
-              href="sell.html"
-              asp-area="" asp-controller="Home" asp-action="Index">SELL</a
-            >
-            <a
-              class="list-group-item list-group-item-action list-group-item-dark p-2"
-              href="quatation.html"
-              asp-area="" asp-controller="Home" asp-action="Index">QUOTATION</a
-            >
-            <a
-              class="list-group-item list-group-item-action list-group-item-dark p-2"
-              href="purchase.html"
-              >PURCHASE</a
-            >
-            <a
-              class="list-group-item list-group-item-action list-group-item-dark p-2"
-              href="#!"
-              >STOCK TRANSFER</a
-            >
-            <a
-              class="list-group-item list-group-item-action list-group-item-dark p-2"
-              href="product.html"
-              asp-area="" asp-controller="Home" asp-action="Index">PRODUCT</a
-            >
-            <a
-              class="list-group-item list-group-item-action list-group-item-dark p-2"
-              href="#!"
-              asp-area="" asp-controller="Home" asp-action="Index">CUSTOMER</a
-            >
-            <a
-              class="list-group-item list-group-item-action list-group-item-dark p-2"
-              href="#!"
-              asp-area="" asp-controller="Home" asp-action="Index">SUPPLIER</a
-            >
-            <a
-              class="list-group-item list-group-item-action list-group-item-dark p-2"
-              href="#!"
-              asp-area="" asp-controller="Home" asp-action="Index">ACCOUNTING</a
-            >
-            <a
-              class="list-group-item list-group-item-action list-group-item-dark p-2"
-              href="#!"
-              asp-area="" asp-controller="Home" asp-action="Index">EXPENDITURE</a
-            >
-            <a
-              class="list-group-item list-group-item-action list-group-item-dark p-2"
-              href="#!"
-              asp-area="" asp-controller="Home" asp-action="Index">REPORTS</a
-            >
-            <a
-              class="list-group-item list-group-item-action list-group-item-dark p-2"
-              href="#!"
-              asp-area="" asp-controller="Home" asp-action="Index">ANALYTICS</a
-            >
-            <a
-              class="list-group-item list-group-item-action list-group-item-dark p-2"
-              href="#!"
-              asp-area="" asp-controller="Home" asp-action="Index">SMS</a
-            >
-            <a
-              class="list-group-item list-group-item-action list-group-item-dark p-2"
-              href="#!"
-              asp-area="" asp-controller="Home" asp-action="Index">USER</a
-            >
-          </div>
-        </div>
-        <!-- Page content wrapper-->
-        
-        <div id="page-content-wrapper">
-          <!-- Top navigation-->
-          <nav
-            class="navbar navbar-expand-lg navbar-light bg-dark bg-opacity-75 text-light border-bottom"
-          >
-            <div class="container-fluid">
-              <h6 class="fw-lighter" id="show-time">Time</h6>
-              <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
+    <title>Stock Transfer</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha384-o0BON6fULJW21L5y+ST2zz6w0Wp0z4lazF11Zu7GZFaU5g5zOuZtJMz9vMLO9aDl"
+      crossorigin="anonymous"
+    />
+    <style>
+      .container {
+        margin-top: 50px;
+      }
+      .form-group label {
+        font-weight: bold;
+      }
+      /* Custom CSS for responsive layout */
+      .card-body-scroll {
+        max-height: 400px;
+        overflow-y: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2 class="text-center mb-4">Stock Transfer</h2>
+      <div class="card">
+        <div class="card-body card-body-scroll">
+          <form>
+            <div class="form-group row">
+              <label for="product" class="col-sm-2 col-form-label"
+                >Product:</label
               >
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
-                  <li class="nav-item active">
-                    <a class="nav-link text-light" href="home.html" asp-area="" asp-controller="Home" asp-action="Index">HOME</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link text-light" href="about.html" asp-area="" asp-controller="Home" asp-action="Index">ABOUT US</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a
-                      class="nav-link dropdown-toggle text-light"
-                      id="navbarDropdown"
-                      href="#"
-                      role="button"
-                      data-bs-toggle="dropdown"
-                      aria-haspopup="true"
-                      aria-expanded="false"
-                      >OTHERS</a
-                    >
-                    <div
-                      class="dropdown-menu dropdown-menu-end"
-                      aria-labelledby="navbarDropdown"
-                    >
-                      <a class="dropdown-item" href="signin.html" asp-area="" asp-controller="Home" asp-action="Index">SIGN IN</a>
-                      <a class="dropdown-item" href="login.html" asp-area="" asp-controller="Home" asp-action="Index">LOG IN</a>
-                      <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="#!" asp-area="" asp-controller="Home" asp-action="Index">Something else here</a>
-                    </div>
-                  </li>
-                </ul>
+              <div class="col-sm-10">
+                <select class="form-control" id="product">
+                  <option>Select Product</option>
+                  <!-- Add product options dynamically from your database -->
+                  <option>Product 1</option>
+                  <option>Product 2</option>
+                  <option>Product 3</option>
+                  <!-- Add more products as needed -->
+                </select>
               </div>
             </div>
-          </nav>
-          </div>
-    </div>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
+            <div class="form-group row">
+              <label for="quantity" class="col-sm-2 col-form-label"
+                >Quantity:</label
+              >
+              <div class="col-sm-10">
+                <input
+                  type="number"
+                  class="form-control"
+                  id="quantity"
+                  placeholder="Enter Quantity"
+                />
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="fromLocation" class="col-sm-2 col-form-label"
+                >From Location:</label
+              >
+              <div class="col-sm-10">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="fromLocation"
+                  placeholder="Enter From Location"
+                />
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-sm-2"></div>
+              <div class="col-sm-10">
+                <div id="fromLocationDetails" style="display: none">
+                  <!-- Additional details fields for From Location -->
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col">
+                        <label for="address">Address:</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="address"
+                          placeholder="Enter Address"
+                        />
+                      </div>
+                      <div class="col">
+                        <label for="phone">Phone Number:</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="phone"
+                          placeholder="Enter Phone Number"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col">
+                        <label for="state">State:</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="state"
+                          placeholder="Enter State"
+                        />
+                      </div>
+                      <div class="col">
+                        <label for="district">District:</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="district"
+                          placeholder="Enter District"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col">
+                        <label for="name">Name:</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="name"
+                          placeholder="Enter Name"
+                        />
+                      </div>
+                      <div class="col">
+                        <label for="email">Email:</label>
+                        <input
+                          type="email"
+                          class="form-control"
+                          id="email"
+                          placeholder="Enter Email"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="toLocation" class="col-sm-2 col-form-label"
+                >To Location:</label
+              >
+              <div class="col-sm-10">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="toLocation"
+                  placeholder="Enter To Location"
+                />
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-sm-2"></div>
+              <div class="col-sm-10">
+                <div id="toLocationDetails" style="display: none">
+                  <!-- Additional details fields for To Location -->
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col">
+                        <label for="toAddress">Address:</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="toAddress"
+                          placeholder="Enter Address"
+                        />
+                      </div>
+                      <div class="col">
+                        <label for="toPhone">Phone Number:</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="toPhone"
+                          placeholder="Enter Phone Number"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col">
+                        <label for="toState">State:</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="toState"
+                          placeholder="Enter State"
+                        />
+                      </div>
+                      <div class="col">
+                        <label for="toDistrict">District:</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="toDistrict"
+                          placeholder="Enter District"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col">
+                        <label for="toName">Name:</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="toName"
+                          placeholder="Enter Name"
+                        />
+                      </div>
+                      <div class="col">
+                        <label for="toEmail">Email:</label>
+                        <input
+                          type="email"
+                          class="form-control"
+                          id="toEmail"
+                          placeholder="Enter Email"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-sm-10 offset-sm-2">
+                <button type="submit" class="btn btn-primary">
+                  <i class="fas fa-exchange-alt"></i> Transfer
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2024 - MvcProject - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
-</body>
+    <!-- Bootstrap JS and jQuery (for Font Awesome) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+      // jQuery script to toggle visibility of additional details section for From Location
+      $(document).ready(function () {
+        $("#fromLocation").on("click", function () {
+          $("#fromLocationDetails").toggle();
+        });
+      });
+
+      // jQuery script to toggle visibility of additional details section for To Location
+      $(document).ready(function () {
+        $("#toLocation").on("click", function () {
+          $("#toLocationDetails").toggle();
+        });
+      });
+    </script>
+  </body>
 </html>

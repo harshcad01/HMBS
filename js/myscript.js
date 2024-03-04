@@ -100,3 +100,70 @@ $(document).ready(function() {
     console.log('Updated Stock:', stock);
   });
 });
+
+
+
+
+
+  // jQuery script to toggle visibility of additional details section for From Location
+  $(document).ready(function () {
+    $("#fromLocation").on("click", function () {
+      $("#fromLocationDetails").toggle();
+    });
+  });
+
+  // jQuery script to toggle visibility of additional details section for To Location
+  $(document).ready(function () {
+    $("#toLocation").on("click", function () {
+      $("#toLocationDetails").toggle();
+    });
+  });
+
+
+
+
+
+  $(document).ready(function () {
+    let customerCount = 0;
+
+    // Function to add a new customer row
+    function addCustomerRow(name, email, phone) {
+      customerCount++;
+      const newRow = `
+      <tr>
+        <th scope="row">${customerCount}</th>
+        <td><input type="text" class="form-control customer-name" value="${name}"></td>
+        <td><input type="text" class="form-control customer-email" value="${email}"></td>
+        <td><input type="text" class="form-control customer-phone" value="${phone}"></td>
+        <td>
+          <button type="button" class="btn btn-success btn-sm update-customer-btn">Update</button>
+          <button type="button" class="btn btn-danger btn-sm remove-customer-btn">Remove</button>
+        </td>
+      </tr>
+    `;
+      $("#customer-list").append(newRow);
+    }
+
+    // Event listener for Add Customer button click
+    $("#add-customer-btn").click(function () {
+      addCustomerRow("New Customer", "", "");
+    });
+
+    // Event listener for Remove Customer button click
+    $(document).on("click", ".remove-customer-btn", function () {
+      $(this).closest("tr").remove();
+    });
+
+    // Event listener for Update Customer button click
+    $(document).on("click", ".update-customer-btn", function () {
+      const row = $(this).closest("tr");
+      const name = row.find(".customer-name").val();
+      const email = row.find(".customer-email").val();
+      const phone = row.find(".customer-phone").val();
+
+      // You can perform further actions with the updated customer data here
+      console.log("Updated Name:", name);
+      console.log("Updated Email:", email);
+      console.log("Updated Phone:", phone);
+    });
+  });
