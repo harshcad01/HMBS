@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accounting and Managing</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha384-o0BON6fULJW21L5y+ST2zz6w0Wp0z4lazF11Zu7GZFaU5g5zOuZtJMz9vMLO9aDl" crossorigin="anonymous">
+</head>
+<body>
+
+<div class="container mt-4">
+    <h2 class="text-center mb-4">Accounting and Managing</h2>
+
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="invoices-tab" data-toggle="tab" href="#invoices" role="tab" aria-controls="invoices" aria-selected="true"><i class="fas fa-file-invoice"></i> Invoices</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="expenses-tab" data-toggle="tab" href="#expenses" role="tab" aria-controls="expenses" aria-selected="false"><i class="fas fa-money-bill-wave"></i> Expenses</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="reports-tab" data-toggle="tab" href="#reports" role="tab" aria-controls="reports" aria-selected="false"><i class="fas fa-chart-line"></i> Reports</a>
+        </li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content mt-3" id="myTabContent">
+        <!-- Invoices Tab -->
+        <div class="tab-pane fade show active" id="invoices" role="tabpanel" aria-labelledby="invoices-tab">
+            <!-- Display invoices and related functionality here -->
+            <h4>Invoices</h4>
+            <ul id="invoiceList"></ul>
+        </div>
+        <!-- Expenses Tab -->
+        <div class="tab-pane fade" id="expenses" role="tabpanel" aria-labelledby="expenses-tab">
+            <!-- Display expenses and related functionality here -->
+            <h4>Expenses</h4>
+            <ul id="expenseList"></ul>
+        </div>
+        <!-- Reports Tab -->
+        <div class="tab-pane fade" id="reports" role="tabpanel" aria-labelledby="reports-tab">
+            <!-- Display reports and related functionality here -->
+            <h4>Reports</h4>
+            <ul id="reportList"></ul>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS and jQuery (for Font Awesome) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    // Sample data for invoices, expenses, and reports
+    const invoices = ["Invoice 1", "Invoice 2", "Invoice 3"];
+    const expenses = ["Expense 1", "Expense 2", "Expense 3"];
+    const reports = ["Report 1", "Report 2", "Report 3"];
+
+    // Function to create list items
+    function createListItems(listId, items) {
+        const list = document.getElementById(listId);
+        items.forEach(item => {
+            const listItem = document.createElement('li');
+            listItem.textContent = item;
+            list.appendChild(listItem);
+        });
+    }
+
+    // Create lists for invoices, expenses, and reports
+    createListItems('invoiceList', invoices);
+    createListItems('expenseList', expenses);
+    createListItems('reportList', reports);
+</script>
+
+</body>
+</html>
