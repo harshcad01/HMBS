@@ -39,7 +39,7 @@
           >
           <a
             class="list-group-item list-group-item-action list-group-item-dark p-2"
-            href="sell.html\"
+            href="sell.html"
             >SELL</a
           >
           <a
@@ -58,8 +58,8 @@
             >STOCK TRANSFER</a
           >
           <a
-            class="list-group-item list-group-item-action list-group-item-dark p-2 custom-style"
-            href="#!"
+            class="list-group-item list-group-item-action list-group-item-dark p-2"
+            href="product.html"
             >PRODUCT</a
           >
           <a
@@ -93,7 +93,7 @@
             >ANALYTICS</a
           >
           <a
-            class="list-group-item list-group-item-action list-group-item-dark p-2"
+            class="list-group-item list-group-item-action list-group-item-dark custom-style p-2"
             href="#!"
             >SMS</a
           >
@@ -126,7 +126,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
                 <li class="nav-item active">
-                  <a class="nav-link text-light " href="home.html">Home</a>
+                  <a class="nav-link text-danger" href="home.html">Home</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link text-light" href="about.html">About Us</a>
@@ -157,36 +157,75 @@
           </div>
         </nav>
         <!--HOME CONTENT HERE-->
-        <div class="container mt-3">
-          <div class="col-lg-13  mb-3">
-            <input type="text" class="form-control" id="searchInput" placeholder="Search products...">
-            <ul id="suggestions" class="list-group mt-1" style="display: none;"></ul>
-          </div>
-            <h2>Product List</h2>
-            <div class="card mt-3">
-              <div class="card-header bg-dark text-white">
-                Products
+        <div class="container mt-4">
+          <h2 class="text-center mb-4">SMS Page</h2>
+      
+          <!-- SMS Form -->
+          <form id="smsForm">
+              <div class="form-group">
+                  <label for="recipient">Recipient:</label>
+                  <select class="form-control" id="recipient">
+                      <option value="">Select recipient</option>
+                      <!-- Options for registered users will be added dynamically here -->
+                  </select>
               </div>
-              <div class="card-body scrollable-table"> <!-- Apply the scrollable-table class here -->
-                <table class="table table-striped">
-                  <thead>
-                    <tr>
-                      <th scope="col">#</th>
-                      <th scope="col">Product Name</th>
-                      <th scope="col">Price</th>
-                      <th scope="col">Stock</th>
-                      <th scope="col">Actions</th> <!-- New column for buttons -->
-                    </tr>
-                  </thead>
-                  <tbody id="product-list">
-                    <!-- Product rows will be dynamically added here -->
-                  </tbody>
-                </table>
+              <div class="form-group">
+                  <label for="message">Message:</label>
+                  <textarea class="form-control" id="message" rows="3" placeholder="Enter your message"></textarea>
               </div>
-            </div>
-            <!-- Add Product Button -->
-            <button type="button" class="btn btn-primary mt-3" id="add-product-btn">Add Product</button>
+              <button type="submit" class="btn btn-primary">Send</button>
+          </form>
+      
+          <!-- SMS History -->
+          <div class="mt-4">
+              <h4>SMS History</h4>
+              <ul id="smsHistory" class="list-group">
+                  <!-- SMS history items will be added dynamically here -->
+              </ul>
           </div>
+      </div>
+      
+      <!-- Your messaging service JavaScript SDK or API script goes here -->
+      
+      <script>
+          // Dummy function to simulate sending SMS
+          function sendSMS(recipient, message) {
+              // Dummy implementation to log SMS to history
+              const smsHistory = document.getElementById('smsHistory');
+              const listItem = document.createElement('li');
+              listItem.className = 'list-group-item';
+              listItem.textContent = `To: ${recipient}, Message: ${message}, Sent at: ${new Date().toLocaleString()}`;
+              smsHistory.appendChild(listItem);
+      
+              // Clear form fields after sending
+              document.getElementById('message').value = '';
+          }
+      
+          // Function to fetch registered users and populate the recipient dropdown
+          function fetchUsers() {
+              // Dummy implementation to fetch users (replace with actual API call)
+              const users = ['User 1', 'User 2', 'User 3']; // Example list of users
+              const recipientSelect = document.getElementById('recipient');
+      
+              users.forEach(user => {
+                  const option = document.createElement('option');
+                  option.value = user;
+                  option.textContent = user;
+                  recipientSelect.appendChild(option);
+              });
+          }
+      
+          // Event listener for page load to fetch registered users
+          window.addEventListener('load', fetchUsers);
+      
+          // Event listener for SMS form submission
+          document.getElementById('smsForm').addEventListener('submit', function(event) {
+              event.preventDefault(); // Prevent form submission
+              const recipient = document.getElementById('recipient').value;
+              const message = document.getElementById('message').value;
+              sendSMS(recipient, message);
+          });
+      </script>
       </div>
     </div>
   </div>

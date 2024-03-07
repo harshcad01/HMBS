@@ -39,7 +39,7 @@
           >
           <a
             class="list-group-item list-group-item-action list-group-item-dark p-2"
-            href="sell.html\"
+            href="sell.html"
             >SELL</a
           >
           <a
@@ -58,8 +58,8 @@
             >STOCK TRANSFER</a
           >
           <a
-            class="list-group-item list-group-item-action list-group-item-dark p-2 custom-style"
-            href="#!"
+            class="list-group-item list-group-item-action list-group-item-dark p-2"
+            href="product.html"
             >PRODUCT</a
           >
           <a
@@ -88,7 +88,7 @@
             >REPORTS</a
           >
           <a
-            class="list-group-item list-group-item-action list-group-item-dark p-2"
+            class="list-group-item list-group-item-action list-group-item-dark custom-style p-2"
             href="#!"
             >ANALYTICS</a
           >
@@ -126,7 +126,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
                 <li class="nav-item active">
-                  <a class="nav-link text-light " href="home.html">Home</a>
+                  <a class="nav-link text-danger" href="home.html">Home</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link text-light" href="about.html">About Us</a>
@@ -157,36 +157,131 @@
           </div>
         </nav>
         <!--HOME CONTENT HERE-->
-        <div class="container mt-3">
-          <div class="col-lg-13  mb-3">
-            <input type="text" class="form-control" id="searchInput" placeholder="Search products...">
-            <ul id="suggestions" class="list-group mt-1" style="display: none;"></ul>
-          </div>
-            <h2>Product List</h2>
-            <div class="card mt-3">
-              <div class="card-header bg-dark text-white">
-                Products
+        <div class="container mt-4">
+          <h2 class="text-center mb-4">Analytics Page</h2>
+      
+          <!-- Date range selection -->
+          <div class="row mb-3">
+              <div class="col-md-6">
+                  <label for="startDate">Start Date:</label>
+                  <input type="date" id="startDate" class="form-control">
               </div>
-              <div class="card-body scrollable-table"> <!-- Apply the scrollable-table class here -->
-                <table class="table table-striped">
-                  <thead>
-                    <tr>
-                      <th scope="col">#</th>
-                      <th scope="col">Product Name</th>
-                      <th scope="col">Price</th>
-                      <th scope="col">Stock</th>
-                      <th scope="col">Actions</th> <!-- New column for buttons -->
-                    </tr>
-                  </thead>
-                  <tbody id="product-list">
-                    <!-- Product rows will be dynamically added here -->
-                  </tbody>
-                </table>
+              <div class="col-md-6">
+                  <label for="endDate">End Date:</label>
+                  <input type="date" id="endDate" class="form-control">
               </div>
-            </div>
-            <!-- Add Product Button -->
-            <button type="button" class="btn btn-primary mt-3" id="add-product-btn">Add Product</button>
           </div>
+      
+          <div class="row">
+              <div class="col-md-6">
+                  <div class="card">
+                      <div class="card-body">
+                          <h5 class="card-title">Sales Trend</h5>
+                          <canvas id="salesChart" width="400" height="200"></canvas>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-6">
+                  <div class="card">
+                      <div class="card-body">
+                          <h5 class="card-title">Revenue vs Expenses</h5>
+                          <canvas id="revenueExpensesChart" width="400" height="200"></canvas>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      
+      <!-- Chart.js CDN -->
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      
+      <script>
+          // Sample data for sales trend chart
+          const salesData = {
+              labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+              datasets: [{
+                  label: 'Sales',
+                  data: [1000, 1200, 1300, 1100, 1500, 1400],
+                  backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                  borderColor: 'rgba(54, 162, 235, 1)',
+                  borderWidth: 1
+              }]
+          };
+      
+          // Sample data for revenue vs expenses chart
+          const revenueExpensesData = {
+              labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+              datasets: [{
+                  label: 'Revenue',
+                  data: [2000, 2200, 2300, 2100, 2500, 2400],
+                  backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                  borderColor: 'rgba(75, 192, 192, 1)',
+                  borderWidth: 1
+              }, {
+                  label: 'Expenses',
+                  data: [1500, 1700, 1600, 1800, 1700, 1900],
+                  backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                  borderColor: 'rgba(255, 99, 132, 1)',
+                  borderWidth: 1
+              }]
+          };
+      
+          // Create sales trend chart
+          const salesChart = new Chart(document.getElementById('salesChart'), {
+              type: 'line',
+              data: salesData,
+              options: {
+                  responsive: true,
+                  scales: {
+                      yAxes: [{
+                          ticks: {
+                              beginAtZero: true
+                          }
+                      }]
+                  }
+              }
+          });
+      
+          // Create revenue vs expenses chart
+          const revenueExpensesChart = new Chart(document.getElementById('revenueExpensesChart'), {
+              type: 'bar',
+              data: revenueExpensesData,
+              options: {
+                  responsive: true,
+                  scales: {
+                      yAxes: [{
+                          ticks: {
+                              beginAtZero: true
+                          }
+                      }]
+                  }
+              }
+          });
+      
+          // Function to update charts based on selected date range
+          function updateCharts(startDate, endDate) {
+              // Here you would fetch data from your backend using the selected date range
+              // and then update the chart data accordingly
+              
+              // For demonstration, let's update the sales chart with random data
+              const randomSalesData = Array.from({ length: 6 }, () => Math.floor(Math.random() * 2000));
+              salesChart.data.datasets[0].data = randomSalesData;
+              salesChart.update();
+          }
+      
+          // Event listener for date range selection change
+          document.getElementById('startDate').addEventListener('change', function() {
+              const startDate = this.value;
+              const endDate = document.getElementById('endDate').value;
+              updateCharts(startDate, endDate);
+          });
+      
+          document.getElementById('endDate').addEventListener('change', function() {
+              const endDate = this.value;
+              const startDate = document.getElementById('startDate').value;
+              updateCharts(startDate, endDate);
+          });
+      </script>
       </div>
     </div>
   </div>
