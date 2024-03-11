@@ -1,47 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Page</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha384-o0BON6fULJW21L5y+ST2zz6w0Wp0z4lazF11Zu7GZFaU5g5zOuZtJMz9vMLO9aDl" crossorigin="anonymous">
-</head>
-<body>
-
-<div class="container mt-4">
-    <h2 class="text-center mb-4">User Page</h2>
-
-    <!-- User Table -->
-    <div class="table-responsive">
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Role</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- User data will be populated here -->
-                <tr>
-                    <td>1</td>
-                    <td>John Doe</td>
-                    <td>john@example.com</td>
-                    <td>User</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Jane Smith</td>
-                    <td>jane@example.com</td>
-                    <td>Staff</td>
-                </tr>
-                <!-- Add more rows for additional users -->
-            </tbody>
-        </table>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>BILLING SOFTWARE</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link rel="stylesheet" href="css/Style.css">
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div class="d-flex" id="wrapper">
+      <!-- Sidebar-->
+      <div class="border-end bg-white" id="sidebar-wrapper">
+        <div class="sidebar-heading border-bottom bg-danger text-light">
+          HMBS
+        </div>
+        <div class="list-group list-group-flush">
+          <a
+            class="list-group-item list-group-item-action list-group-item-dark p-2"
+            href="index.html"
+            >DASHBOARD</a
+          >
+          <a
+            class="list-group-item list-group-item-action list-group-item-dark p-2"
+            href="pos.html"
+            >POINT OF SALE</a
+          >
+          <a
+            class="list-group-item list-group-item-action list-group-item-dark p-2"
+            href="sell.html"
+            >SELL</a
+          >
+          <a
+            class="list-group-item list-group-item-action list-group-item-dark p-2"
+            href="quatation.html"
+            >QUOTATION</a
+          >
+          <a
+            class="list-group-item list-group-item-action list-group-item-dark p-2"
+            href="purchase.html"
+            >PURCHASE</a
+          >
+          <a
+            class="list-group-item list-group-item-action list-group-item-dark p-2"
+            href="stocktransfer.html"
+            >STOCK TRANSFER</a
+          >
+          <a
+            class="list-group-item list-group-item-action list-group-item-dark p-2"
+            href="product.html"
+            >PRODUCT</a
+          >
+          <a
+            class="list-group-item list-group-item-action list-group-item-dark p-2"
+            href="customer.html"
+            >CUSTOMER</a
+          >
+          <a
+            class="list-group-item list-group-item-action list-group-item-dark p-2"
+            href="supplier.html"
+            >SUPPLIER</a
+          >
+          <a
+            class="list-group-item list-group-item-action list-group-item-dark p-2"
+            href="accounting.html"
+            >ACCOUNTING</a
+          >
+          <a
+            class="list-group-item list-group-item-action list-group-item-dark p-2"
+            href="expenditure.html"
+            >EXPENDITURE</a
+          >
+          <a
+            class="list-group-item list-group-item-action list-group-item-dark p-2"
+            href="#!"
+            >REPORTS</a
+          >
+          <a
+            class="list-group-item list-group-item-action list-group-item-dark p-2"
+            href="analytics.html"
+            >ANALYTICS</a
+          >
+          <a
+            class="list-group-item list-group-item-action list-group-item-dark p-2"
+            href="sms.html"
+            >SMS</a
+          >
+          <a
+            class="list-group-item list-group-item-action list-group-item-dark custom-style p-2"
+            href="#!"
+            >USER</a
+          >
+        </div>
+      </div>
+      <!-- Page content wrapper-->
+      <div id="page-content-wrapper">
+        <!-- Top navigation-->
+        <nav
+          class="navbar navbar-expand-lg navbar-light bg-dark bg-opacity-75 text-light border-bottom"
+        >
+          <div class="container-fluid">
+            <h6 class="fw-lighter" id="show-time">Time</h6>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                  <a class="nav-link text-danger" href="home.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-light" href="about.html">About Us</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle text-light"
+                    id="navbarDropdown"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    >Others</a
+                  >
+                  <div
+                    class="dropdown-menu dropdown-menu-end"
+                    aria-labelledby="navbarDropdown"
+                  >
+                    <a class="dropdown-item" href="signin.html">Sign In</a>
+                    <a class="dropdown-item" href="login.html">Log In</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#!">Something else here</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <!--HOME CONTENT HERE-->
+        <div class="container mt-4">
+          <h2 class="text-center mb-4">User Page</h2>
+      
+          <!-- User Table -->
+          <div class="table-responsive">
+              <table class="table table-striped">
+                  <thead>
+                      <tr>
+                          <th>ID</th>
+                          <th>Name</th>
+                          <th>Email</th>
+                          <th>Role</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <!-- User data will be populated here -->
+                      <tr>
+                          <td>1</td>
+                          <td>John Doe</td>
+                          <td>john@example.com</td>
+                          <td>User</td>
+                      </tr>
+                      <tr>
+                          <td>2</td>
+                          <td>Jane Smith</td>
+                          <td>jane@example.com</td>
+                          <td>Staff</td>
+                      </tr>
+                      <!-- Add more rows for additional users -->
+                  </tbody>
+              </table>
+          </div>
+      </div>
+      </div>
     </div>
-</div>
-
-</body>
+  </div>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/myscript.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+  </body>
 </html>
